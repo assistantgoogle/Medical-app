@@ -24,6 +24,7 @@ Project Structure
 plaintext
 Copy
 Edit
+
 src/  
   ├── components/  
   │   ├── DicomViewer.tsx       # Main DICOM viewing component  
@@ -32,6 +33,7 @@ src/
   │   └── measurement/          # Measurement-related components  
   └── pages/  
       └── Index.tsx             # Main application page  
+      
 Methodology & Implementation
 DICOM Processing
 Utilized the dicom-parser library for metadata and pixel data extraction.
@@ -48,6 +50,7 @@ Integrated zoom functionality while maintaining aspect ratios.
 Ensured smooth real-time updates for seamless user interaction.
 Installation
 Prerequisites
+
 Node.js (v14 or higher)
 npm or yarn package manager
 Steps
@@ -69,11 +72,13 @@ Building for Production
 bash
 Copy
 Edit
+
 # Create a production build  
 npm run build  
 
 # Preview the production build  
 npm run preview  
+
 Usage
 Upload a DICOM file using the file upload feature.
 View essential metadata in the metadata panel.
@@ -82,13 +87,16 @@ Adjust brightness and contrast with the sliders.
 Zoom in or out for detailed analysis.
 Challenges & Solutions
 DICOM Parsing
+
 Challenge: Handling a wide variety of DICOM formats.
 Solution: Implemented error handling and metadata validation for robust parsing.
 
 Measurement Accuracy
+
 Challenge: Ensuring precise real-world measurements.
 Solution: Leveraged pixel spacing metadata for accurate distance calculations.
 
 Performance
+
 Challenge: Managing large DICOM files efficiently.
 Solution: Optimized canvas rendering and implemented progressive loading.
