@@ -3,7 +3,9 @@ A web-based DICOM viewer application designed for healthcare professionals and r
 
 🌐 Live Demo
 
-Click here to access the application  https://complete-code-generator.lovable.app/
+Click here to access the application  https://medical-app-site.netlify.app/
+
+
 
 Features
 DICOM File Upload: Seamlessly upload and parse DICOM files.
