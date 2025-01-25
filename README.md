@@ -1,69 +1,92 @@
-# Welcome to your Lovable project
+DICOM Viewer Application
+A web-based DICOM viewer application designed for healthcare professionals and researchers to upload, view, and analyze medical images effectively. This modern, responsive application simplifies the process of analyzing DICOM files while offering essential image manipulation and measurement tools.
 
-## Project info
+🌐 Live Demo
 
-**URL**: https://lovable.dev/projects/31795ae5-2e6f-47f0-829e-330c673df4be
+Click here to access the application  https://complete-code-generator.lovable.app/
 
-## How can I edit this code?
+Features
+DICOM File Upload: Seamlessly upload and parse DICOM files.
+Metadata Extraction: Extract and display essential metadata such as patient information and image attributes.
+Measurement Tools: Measure distances in images with real-time updates, including mm-to-pixel conversion.
+Image Manipulation: Adjust brightness, contrast, and zoom for detailed image analysis.
+Responsive Design: Works flawlessly across devices and screen sizes.
+Tech Stack
+Frontend Framework: React with TypeScript
+Build Tool: Vite
+UI Components: Shadcn UI
+Styling: Tailwind CSS
+DICOM Processing: dicom-parser library
+Icons: Lucide React
+Project Structure
+plaintext
+Copy
+Edit
+src/  
+  ├── components/  
+  │   ├── DicomViewer.tsx       # Main DICOM viewing component  
+  │   ├── ImageViewer.tsx       # Image display and manipulation  
+  │   ├── MeasurementTool.tsx   # Distance measurement functionality  
+  │   └── measurement/          # Measurement-related components  
+  └── pages/  
+      └── Index.tsx             # Main application page  
+Methodology & Implementation
+DICOM Processing
+Utilized the dicom-parser library for metadata and pixel data extraction.
+Implemented robust error handling to manage various DICOM file formats.
+Calculated pixel spacing for accurate measurements.
+Measurement Implementation
+Extracted pixel spacing from DICOM metadata.
+Calculated pixel-to-millimeter conversion factors.
+Implemented point-to-point measurement tools with real-time updates.
+Displayed measurements in both pixels and millimeters for convenience.
+Image Manipulation
+Enhanced image analysis with adjustable brightness and contrast.
+Integrated zoom functionality while maintaining aspect ratios.
+Ensured smooth real-time updates for seamless user interaction.
+Installation
+Prerequisites
+Node.js (v14 or higher)
+npm or yarn package manager
+Steps
+bash
+Copy
+Edit
+# Clone the repository  
+git clone <repository-url>  
 
-There are several ways of editing your application.
+# Navigate to the project directory  
+cd medical-image-viewer  
 
-**Use Lovable**
+# Install dependencies  
+npm install  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/31795ae5-2e6f-47f0-829e-330c673df4be) and start prompting.
+# Start the development server  
+npm run dev  
+Building for Production
+bash
+Copy
+Edit
+# Create a production build  
+npm run build  
 
-Changes made via Lovable will be committed automatically to this repo.
+# Preview the production build  
+npm run preview  
+Usage
+Upload a DICOM file using the file upload feature.
+View essential metadata in the metadata panel.
+Use measurement tools to calculate distances in the image.
+Adjust brightness and contrast with the sliders.
+Zoom in or out for detailed analysis.
+Challenges & Solutions
+DICOM Parsing
+Challenge: Handling a wide variety of DICOM formats.
+Solution: Implemented error handling and metadata validation for robust parsing.
 
-**Use your preferred IDE**
+Measurement Accuracy
+Challenge: Ensuring precise real-world measurements.
+Solution: Leveraged pixel spacing metadata for accurate distance calculations.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/31795ae5-2e6f-47f0-829e-330c673df4be) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Performance
+Challenge: Managing large DICOM files efficiently.
+Solution: Optimized canvas rendering and implemented progressive loading.
